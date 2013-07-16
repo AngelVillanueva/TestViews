@@ -45,4 +45,11 @@
     //[self.navigationController performSegueWithIdentifier: @"mySegue" sender: self];
     
 }
+
+- (IBAction)goGame:(id)sender {
+    
+    ViewController *game = [self.storyboard instantiateViewControllerWithIdentifier:@"game"];
+    [self presentViewController:game animated:YES completion:NULL];
+    
+}
 @end

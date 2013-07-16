@@ -26,13 +26,28 @@
                                     <action selector="goExtras:" destination="2" eventType="touchUpInside" id="V3d-Kb-fL7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5oK-Q0-HNl">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Jugar">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goGame:" destination="2" eventType="touchUpInside" id="0Gh-xu-koL"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="IWY-3s-Fvu" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="7tr-ye-nhX"/>
                             <constraint firstAttribute="trailing" secondItem="ikw-kc-Ux1" secondAttribute="trailing" constant="75" id="8OG-W8-eLM"/>
+                            <constraint firstAttribute="bottom" secondItem="5oK-Q0-HNl" secondAttribute="bottom" constant="74" id="BMb-7D-kU3"/>
                             <constraint firstItem="IWY-3s-Fvu" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="ItI-Oa-MT0"/>
                             <constraint firstItem="ikw-kc-Ux1" firstAttribute="top" secondItem="3" secondAttribute="top" constant="130" id="PDT-Kf-WDh"/>
+                            <constraint firstItem="5oK-Q0-HNl" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="282" id="cVb-qH-O2o"/>
                             <constraint firstItem="IWY-3s-Fvu" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="yl2-hH-XMX"/>
                         </constraints>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -91,23 +106,53 @@
             </objects>
             <point key="canvasLocation" x="523" y="-212"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="DIs-xZ-A06">
+            <objects>
+                <viewController storyboardIdentifier="game" id="TjZ-eF-BKi" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7m5-Tv-zwD">
+                        <rect key="frame" x="0.0" y="20" width="568" height="300"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="hola soy el Game" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vbw-u0-Okq">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRO-Hj-3F0">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goMenu:" destination="TjZ-eF-BKi" eventType="touchUpInside" id="Jk9-Qt-IAy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vbw-u0-Okq" firstAttribute="top" secondItem="7m5-Tv-zwD" secondAttribute="top" constant="75" id="88H-jD-hCe"/>
+                            <constraint firstAttribute="bottom" secondItem="jRO-Hj-3F0" secondAttribute="bottom" constant="52" id="LX7-pS-E74"/>
+                            <constraint firstItem="Vbw-u0-Okq" firstAttribute="centerX" secondItem="7m5-Tv-zwD" secondAttribute="centerX" type="default" id="M5O-0F-Y22"/>
+                            <constraint firstItem="jRO-Hj-3F0" firstAttribute="leading" secondItem="7m5-Tv-zwD" secondAttribute="leading" constant="270" id="sBY-MM-b0R"/>
+                        </constraints>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kbz-1R-UBE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="674" y="406"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Extras Menu.png" width="480" height="320"/>
         <image name="Main Menu.png" width="480" height="320"/>
     </resources>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="goExtras:"/>
-                <relationship kind="action" name="goMenu:"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

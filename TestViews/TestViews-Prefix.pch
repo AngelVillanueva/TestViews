@@ -12,3 +12,6 @@
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
 #endif
+
+#define MAXIMUM_LEVEL = 2
+#define INITIAL_LEVEL = 1
