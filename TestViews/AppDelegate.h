@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GameStateManager.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
+@interface AppDelegate : GameStateManager <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
