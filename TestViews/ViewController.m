@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "GameGameState.h"
+#import "GameStateManager.h"
 
 @interface ViewController ()
 
@@ -49,6 +51,7 @@
 - (IBAction)goGame:(id)sender {
     
     ViewController *game = [self.storyboard instantiateViewControllerWithIdentifier:@"game"];
+    self.view = [[GameGameState alloc] init];
     [self presentViewController:game animated:YES completion:NULL];
     
 }
