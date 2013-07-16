@@ -26,4 +26,23 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)goExtras:(id)sender {
+    
+    //    SecondView *second = [[SecondView alloc] initWithNibName:nil bundle:nil];
+    //    [self presentViewController:second animated:YES completion:NULL];
+    ViewController *second = [self.storyboard instantiateViewControllerWithIdentifier:@"second"];
+    //[self pushViewController:second animated:YES];
+    [self presentViewController:second animated:YES completion:NULL];
+    //[self.navigationController performSegueWithIdentifier: @"mySegue" sender: self];
+}
+
+- (IBAction)goMenu:(id)sender {
+    //    SecondView *second = [[SecondView alloc] initWithNibName:nil bundle:nil];
+    //    [self presentViewController:second animated:YES completion:NULL];
+    ViewController *mainMenu = [self.storyboard instantiateViewControllerWithIdentifier:@"mainMenu"];
+    //[self pushViewController:second animated:YES];
+    [self presentViewController:mainMenu animated:YES completion:NULL];
+    //[self.navigationController performSegueWithIdentifier: @"mySegue" sender: self];
+    
+}
 @end

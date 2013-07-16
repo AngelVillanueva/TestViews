@@ -18,6 +18,8 @@
 		84DC22EE1795857A000D4096 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 84DC22ED1795857A000D4096 /* Default-568h@2x.png */; };
 		84DC22F11795857A000D4096 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84DC22EF1795857A000D4096 /* MainStoryboard.storyboard */; };
 		84DC22F41795857A000D4096 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84DC22F31795857A000D4096 /* ViewController.m */; };
+		84DC22FB17958613000D4096 /* Main Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 84DC22FA17958613000D4096 /* Main Menu.png */; };
+		84DC22FD17958782000D4096 /* Extras Menu.png in Resources */ = {isa = PBXBuildFile; fileRef = 84DC22FC17958781000D4096 /* Extras Menu.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		84DC22F01795857A000D4096 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		84DC22F21795857A000D4096 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		84DC22F31795857A000D4096 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		84DC22FA17958613000D4096 /* Main Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Main Menu.png"; sourceTree = "<group>"; };
+		84DC22FC17958781000D4096 /* Extras Menu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Extras Menu.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 				84DC22E61795857A000D4096 /* AppDelegate.h */,
 				84DC22E71795857A000D4096 /* AppDelegate.m */,
 				84DC22EF1795857A000D4096 /* MainStoryboard.storyboard */,
+				84DC22FC17958781000D4096 /* Extras Menu.png */,
+				84DC22FA17958613000D4096 /* Main Menu.png */,
 				84DC22F21795857A000D4096 /* ViewController.h */,
 				84DC22F31795857A000D4096 /* ViewController.m */,
 				84DC22DE1795857A000D4096 /* Supporting Files */,
@@ -163,6 +169,8 @@
 				84DC22EC1795857A000D4096 /* Default@2x.png in Resources */,
 				84DC22EE1795857A000D4096 /* Default-568h@2x.png in Resources */,
 				84DC22F11795857A000D4096 /* MainStoryboard.storyboard in Resources */,
+				84DC22FB17958613000D4096 /* Main Menu.png in Resources */,
+				84DC22FD17958782000D4096 /* Extras Menu.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,7 +271,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestViews/TestViews-Prefix.pch";
 				INFOPLIST_FILE = "TestViews/TestViews-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -274,7 +284,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestViews/TestViews-Prefix.pch";
 				INFOPLIST_FILE = "TestViews/TestViews-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
