@@ -8,7 +8,7 @@
         <scene sceneID="5">
             <objects>
                 <viewController storyboardIdentifier="mainMenu" id="2" customClass="ViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3">
+                    <view key="view" contentMode="scaleToFill" id="3" customClass="GameState">
                         <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -153,6 +153,22 @@
         <image name="Extras Menu.png" width="480" height="320"/>
         <image name="Main Menu.png" width="480" height="320"/>
     </resources>
+    <classes>
+        <class className="GameState" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/GameState.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="goExtras:"/>
+                <relationship kind="action" name="goGame:"/>
+                <relationship kind="action" name="goMenu:"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

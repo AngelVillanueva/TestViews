@@ -13,11 +13,26 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    _viewController = _window.rootViewController;
     
     // start Loop
     NSLog(@"loop started");
+    [NSTimer scheduledTimerWithTimeInterval:0.033 target:self selector:@selector(gameLoop:) userInfo:nil repeats:NO];
     
     return YES;
+}
+
+- (void) gameLoop:(id)sender {
+    
+    // Update and Render the actual view
+    NSLog(@"Loop control");
+    [(GameState *)_viewController.view update];
+    [(GameState *)_viewController.view render];
+    
+    // And loop again
+    [NSTimer scheduledTimerWithTimeInterval:0.033 target:self selector:@selector(gameLoop:) userInfo:nil repeats:NO];
+    
+    
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

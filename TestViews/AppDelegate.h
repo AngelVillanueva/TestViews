@@ -7,10 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GameStateManager.h"
+#include "GameStateManager.h"
+#include "GameState.h"
 
 @interface AppDelegate : GameStateManager <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) UIViewController *viewController;
+
+- (void)gameLoop:(id)sender;
 
 @end
