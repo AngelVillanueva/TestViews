@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "GameGameState.h"
-#import "GameStateManager.h"
 
 @interface ViewController ()
 

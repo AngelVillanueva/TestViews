@@ -15,18 +15,34 @@
     self = [super initWithFrame:frame];
     if (self) {
         self.current_level = INITIAL_LEVEL;
+        self.Is_new_level = YES;
     }
     return self;
 }
 
 -(void)update {
+    // If this is a new level we need to initialized it
+    if (self.Is_new_level == YES) {
+        self.Is_new_level = NO;
+        // If there are no more levels to load then load the WinGame state: kudos, you Won the Game! (except if this is the first level, which is always loaded)
+        if (self.current_level != 1 && self.current_level > gameManager.maximum_level) {
+            NSLog(@"Has ganado el juego");
+        } else {
+            //self.level = [[Level alloc] initWithLevel:self.current_level];
+            self.Is_new_animation = YES;
+            self.buttons_added = NO;
+            //self.current_path = [[NSMutableArray alloc] initWithCapacity:self.level.movimientos.count];
+            //self.active_buttons = self.level.movimientos.count;
+            self.Can_finish_level = YES;
+            self.animation_key = @"0";
+        }
+    }
     
 }
 
 -(void)render {
     
-    NSLog(@"game render with %d", self.current_level);
-    self.current_level++;
+    
     
 }
 
